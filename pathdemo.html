@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PathDemo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- css -->
+		<link rel="stylesheet" href="pathdemo.css" />
+
+		<!-- js -->
+		<script type="text/javascript" src="jquery-2.0.3.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			var isClick = 1;
+			$(".circle").click(function(){
+					//todo:
+					if(1 == isClick){
+						$(this).removeClass('rotat_back').addClass('rotat');
+						$(this).data("checked" , "checked");
+						
+						isClick = 2;
+					}else if(2 == isClick){
+						$(this).removeClass('rotat').addClass('rotat_back');
+						$(this).data("checked" , "unchecked");
+						isClick = 1;
+					}
+					//alert($(this).data("checked"));
+					var isChecked = $(this).data("checked");
+					
+				});
+			});
+			
+			
+		</script>
+		
+	</head>
+	
+	<body>
+		<div class="circle_parent">
+		<div class="circle" data-checked="checked">✖</div>
+		<div>
+	</body>
+	
+</html>
